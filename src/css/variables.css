@@ -1,0 +1,8 @@
+:root{
+[data-apperarance="light"]{
+    --system-color-textPrimary: #eee;
+    --system-color-fillPrimary: #333;
+    --system-color-link: lch(33 111 231.17);
+}
+
+}
