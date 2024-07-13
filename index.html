@@ -14,8 +14,38 @@
 </head>
 
 <body>
-    <h1>Activities</h1>
-    <section></section>
+
+    <form onsubmit="saveActivity(event)">
+        
+        <div>
+            <input 
+            type="text"  
+            placeholder="What's the activity?" name="activity" 
+            required> 
+        </div>
+
+        <div>
+            <select name="day">
+                <option value="2024-07-06">
+                    01 de fevereiro</option>
+            </select>
+        </div>
+ 
+        <div>
+            <select name="hour">
+                <option value="10:30">10:30</option>
+            </select>
+        </div>
+        
+        <button>Save activity</button>
+    </form>
+
+
+    <main>
+        <h1>Activities</h1>
+        <section></section>
+    </main>
+
     <script src="./src/js/index.js"></script>
 
 </body>
