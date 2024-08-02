@@ -9,42 +9,67 @@
     <script>dayjs.locale('en-uk')</script>
 
     <title>Trip Planner</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="./src/css/variables.css">
     <link rel="stylesheet" href="./src/css/style.css">
 </head>
 
 <body>
+    <div id="app">
+        <form onsubmit="saveActivity(event)">
 
-    <form onsubmit="saveActivity(event)">
-        
-        <div>
-            <input 
-            type="text"  
-            placeholder="What's the activity?" name="activity" 
-            required> 
-        </div>
+            <div id="place" class='card-bg'>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16.6666 8.33329C16.6666 13.3333 9.99998 18.3333 9.99998 18.3333C9.99998 18.3333 3.33331 13.3333 3.33331 8.33329C3.33331 6.56518 4.03569 4.86949 5.28593 3.61925C6.53618 2.36901 8.23187 1.66663 9.99998 1.66663C11.7681 1.66663 13.4638 2.36901 14.714 3.61925C15.9643 4.86949 16.6666 6.56518 16.6666 8.33329Z" stroke="#E4E4E7" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M9.99998 10.8333C11.3807 10.8333 12.5 9.714 12.5 8.33329C12.5 6.95258 11.3807 5.83329 9.99998 5.83329C8.61927 5.83329 7.49998 6.95258 7.49998 8.33329C7.49998 9.714 8.61927 10.8333 9.99998 10.8333Z" stroke="#E4E4E7" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    
+                São Paulo - SP
 
-        <div>
-            <select name="day">
-                <option value="2024-07-06">
-                    01 de fevereiro</option>
-            </select>
-        </div>
- 
-        <div>
-            <select name="hour">
-                <option value="10:30">10:30</option>
-            </select>
-        </div>
-        
-        <button>Save activity</button>
-    </form>
+            </div>
+
+            <div class="fields">
+                <div class="field-wrapper">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-tag"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"/><circle cx="7.5" cy="7.5" r=".5" fill="currentColor"/>
+                    </svg>
+                    <input type="text" placeholder="What's the activity?" name="activity" required>
+                </div>
+
+                <div class="field-wrapper">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.66667 1.66663V4.99996M13.3333 1.66663V4.99996M2.5 8.33329H17.5M4.16667 3.33329H15.8333C16.7538 3.33329 17.5 4.07948 17.5 4.99996V16.6666C17.5 17.5871 16.7538 18.3333 15.8333 18.3333H4.16667C3.24619 18.3333 2.5 17.5871 2.5 16.6666V4.99996C2.5 4.07948 3.24619 3.33329 4.16667 3.33329Z" stroke="#E4E4E7" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        
+                    <select name="day">
+                        <option value="2024-07-06">
+                            01 de fevereiro</option>
+                    </select>
+                </div>
+
+                <div class="field-wrapper">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 4.99996V9.99996L13.3334 11.6666M18.3334 9.99996C18.3334 14.6023 14.6024 18.3333 10 18.3333C5.39765 18.3333 1.66669 14.6023 1.66669 9.99996C1.66669 5.39759 5.39765 1.66663 10 1.66663C14.6024 1.66663 18.3334 5.39759 18.3334 9.99996Z" stroke="#E4E4E7" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        
+                    <select name="hour">
+                        <option value="10:30">10:30</option>
+                    </select>
+                </div>
+            </div>
+
+            <button>Save activity</button>
+        </form>
 
 
-    <main>
-        <h1>Activities</h1>
-        <section></section>
-    </main>
+        <main>
+            <h1>Activities</h1>
+            <section></section>
+        </main>
+
+    </div>
 
     <script src="./src/js/index.js"></script>
 
